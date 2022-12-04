@@ -1,7 +1,6 @@
 FROM node:16-alpine
-WORKDIR /front
-RUN git clone https://github.com/savchuckvadim/chat_client
-RUN cd ./chat_client
+WORKDIR /front/chat_client
+
 COPY package.json .
 RUN npm install
 RUN npm run build
