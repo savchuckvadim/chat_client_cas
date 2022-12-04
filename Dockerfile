@@ -1,5 +1,5 @@
 FROM node:16-alpine
-WORKDIR /front/chat_client
+WORKDIR /chat_client
 
 COPY package.json .
 RUN npm install
