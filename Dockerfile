@@ -4,7 +4,7 @@ WORKDIR /chat_client
 COPY package.json ./chat_client
 RUN npm install
 RUN npm run build
-COPY . .
+COPY ./chat_client ./chat_client
 EXPOSE 3000
 
 CMD ["forever", "start", "./chat_client/build/index.html"]
