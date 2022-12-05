@@ -10,7 +10,7 @@ RUN git clone https://github.com/savchuckvadim/chat_client
 # COPY  ./chat_client/package.json ./chat_client
 COPY . ./chat
 #
-# RUN cd ./chat
+RUN cd ./chat_client
 RUN npm install
 RUN npm run build
 
