@@ -3,7 +3,7 @@ WORKDIR /chat_client
 
 
 # RUN sudo dnf install git-all
-RUN apt install git
+RUN apk add git
 RUN git clone https://github.com/savchuckvadim/chat_client
 # COPY  ./chat_client/package.json ./chat_client
 RUN npm install
