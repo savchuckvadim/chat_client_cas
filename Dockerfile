@@ -2,7 +2,7 @@ FROM node:16-alpine
 WORKDIR /chat_client
 
 
-RUN sudo dnf install git-all
+# RUN sudo dnf install git-all
 RUN sudo apt install git
 RUN git clone https://github.com/savchuckvadim/chat_client
 # COPY  ./chat_client/package.json ./chat_client
