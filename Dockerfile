@@ -6,7 +6,7 @@ WORKDIR /chat
 RUN apk update && apk upgrade && apk add bash
 RUN apk add git
 RUN apk update 
-RUN git clone https://github.com/savchuckvadim/chat_client
+RUN git clone https://github.com/savchuckvadim/chat_client .
 # COPY  ./chat_client/package.json ./chat_client
 COPY . ./chat
 #
