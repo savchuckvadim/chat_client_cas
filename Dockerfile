@@ -6,13 +6,13 @@ WORKDIR /chat
 RUN apk update && apk upgrade && apk add bash
 RUN apk add git
 RUN apk update 
-RUN apk git clone https://github.com/savchuckvadim/chat_client
+RUN git clone https://github.com/savchuckvadim/chat_client
 # COPY  ./chat_client/package.json ./chat_client
 COPY . ./chat
 #
-RUN apk cd ./chat/chat_client
-RUN apk npm install
-RUN apk npm run build
+# RUN cd ./chat
+RUN npm install
+RUN npm run build
 
 EXPOSE 3000
 
