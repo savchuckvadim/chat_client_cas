@@ -11,9 +11,10 @@ RUN git clone https://github.com/savchuckvadim/chat_client .
 COPY . ./chat
 #
 # RUN cd ./chat_client
-RUN npm install -g npm@9.1.3
-RUN npm install
-RUN npm run build
+RUN apk npm install -g npm@9.1.3
+RUN apk npm install svgo@2.0.0
+RUN apk npm install
+RUN apk npm run build
 
 EXPOSE 3000
 
