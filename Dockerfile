@@ -8,7 +8,7 @@ RUN apk add git
 RUN apk update 
 RUN git clone https://github.com/savchuckvadim/chat_client .
 # COPY  ./chat_client/package.json ./chat_client
-COPY . ./chat
+COPY ./chat_client ./chat
 #
 # RUN cd ./chat_client
 RUN npm install npm@9.1.3 svgo@2.0.0
